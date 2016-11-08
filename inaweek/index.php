@@ -114,123 +114,135 @@ if(isset($_POST['btlogin']))
 					<div class="intro-table intro-table-first">
 						<h3 class="white heading">Evenementen</h3>
 						<div class="owl-carousel owl-schedule bottom">
-							<div class="item">
-								<div class="schedule-row row">
-									<div class="col-xs-6">
-										<h4 class="regular white">Maandag</h4>
-									</div>
-									<div class="col-xs-6 text-right">
-										<h4 class="white">7-11-2016</h4>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div class="col-xs-6">
-										<h5 class="regular white">Early Exercise</h5>
-									</div>
-									<div class="col-xs-6 text-right">
-										<h5 class="white">8:30 - 10:00</h5>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div class="col-xs-6">
-										<h5 class="regular white">Early Exercise</h5>
-									</div>
-									<div class="col-xs-6 text-right">
-										<h5 class="white">8:30 - 10:00</h5>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div class="col-xs-12">
-										<h5 class="regular white">Geen beschikbare Evenementen</h5>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div align="center" class="col-xs-12">
-										<a href="#"><h4 class="regular white">More</h4></a>
-									</div>
+							<?php
 
-								</div>
-							</div>
-							<div class="item">
-								<div class="schedule-row row">
-									<div class="col-xs-6">
-										<h4 class="regular white">Dinsdag</h4>
-									</div>
-									<div class="col-xs-6 text-right">
-										<h4 class="white">8-11-2016</h4>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div class="col-xs-6">
-										<h5 class="regular white">Early Exercise</h5>
-									</div>
-									<div class="col-xs-6 text-right">
-										<h5 class="white">8:30 - 10:00</h5>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div class="col-xs-6">
-										<h5 class="regular white">Early Exercise</h5>
-									</div>
-									<div class="col-xs-6 text-right">
-										<h5 class="white">8:30 - 10:00</h5>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div class="col-xs-12">
-										<h5 class="regular white">Geen beschikbare Evenementen</h5>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div align="center" class="col-xs-12">
-										<a href="#"><h4 class="regular white">More</h4></a>
-									</div>
+							date_default_timezone_set('CET');
 
-								</div>
-							</div>
-							<div class="item">
-								<div class="schedule-row row">
-									<div class="col-xs-6">
-										<h4 class="regular white">Woensdag</h4>
-									</div>
-									<div class="col-xs-6 text-right">
-										<h4 class="white">9-11-2016</h4>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div class="col-xs-6">
-										<h5 class="regular white">Early Exercise</h5>
-									</div>
-									<div class="col-xs-6 text-right">
-										<h5 class="white">8:30 - 10:00</h5>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div class="col-xs-6">
-										<h5 class="regular white">Early Exercise</h5>
-									</div>
-									<div class="col-xs-6 text-right">
-										<h5 class="white">8:30 - 10:00</h5>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div class="col-xs-12">
-										<h5 class="regular white">Geen beschikbare Evenementen</h5>
-									</div>
-								</div>
-								<div class="schedule-row row">
-									<div align="center" class="col-xs-12">
-										<a href="#"><h4 class="regular white">More</h4></a>
-									</div>
 
-								</div>
-							</div>
+							// Prints something like: Monday
+
+							$datetime = new DateTime(date('l'));
+
+
+							$datetime1 = new DateTime(date('l'));
+							$datetime1->modify('+1 day');
+
+
+							$datetime2 = new DateTime(date('l'));
+							$datetime2->modify('+2 day');
+
+
+							$dag1 = $datetime->format('l');
+							$dag2 = $datetime1->format('l');
+							$dag3 = $datetime2->format('l');
+
+								switch ($dag1) {
+									case 'Monday':
+										$arrayday= ["Maandag", "Dinsdag", "Woensdag"];
+										break;
+									case 'Tuesday':
+										$arrayday= ["Dinsdag", "Woensdag", "Donderdag"];
+										break;
+									case 'Wednesday':
+										$arrayday= ["Woensdag", "Donderdag", "Vrijdag"];
+										break;
+									case 'Thursday':
+										$arrayday= ["Donderdag", "Vrijdag", "Zaterdag"];
+										break;
+									case 'Friday':
+										$arrayday= ["Vrijdag", "Zaterdag", "Zondag"];
+										break;
+									case 'Saturday':
+										$arrayday= ["Zaterdag", "Zondag", "Maandag"];
+										break;
+									case 'Sunday':
+										$arrayday= ["Zondag", "Maandag", "Dinsdag"];
+										break;
+								}
+								$arraydate= [$datetime->format('d-m-Y'), $datetime1->format('d-m-Y'), $datetime2->format('d-m-Y')];
+
+
+								for ($i=0; $i < 3; $i++) {
+
+									echo '	<div class="item">
+																<div class="schedule-row row">
+																	<div class="col-xs-6">
+																		<h4 class="regular white">'; echo "$arrayday[$i]"; echo'</h4>
+																	</div>
+																	<div class="col-xs-6 text-right">
+																		<h4 class="white">'; echo "$arraydate[$i]"; echo'</h4>
+																	</div>
+																</div>
+
+
+																<div class="schedule-row row">
+																	<div class="col-xs-6">
+																		<h5 class="regular white">Early Exercise</h5>
+																	</div>
+																	<div class="col-xs-6 text-right">
+																		<h5 class="white">8:30 - 10:00</h5>
+																	</div>
+																</div>
+																<div class="schedule-row row">
+																	<div class="col-xs-6">
+																		<h5 class="regular white">Early Exercise</h5>
+																	</div>
+																	<div class="col-xs-6 text-right">
+																		<h5 class="white">8:30 - 10:00</h5>
+																	</div>
+																</div>
+																<div class="schedule-row row">
+																	<div class="col-xs-12">
+																		<h5 class="regular white">Geen beschikbare Evenementen</h5>
+																	</div>
+																</div>
+
+
+																<div class="schedule-row row">
+																	<div align="center" class="col-xs-12">
+																		<a href="#"><h4 class="regular white">More</h4></a>
+																	</div>
+
+																</div>
+															</div>';
+														}
+							 ?>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="intro-table intro-table-third">
 						<h5 class="white heading">Happy Clients</h5>
+						<canvas id="myChart" width="400" height="200"></canvas>
+
+<script src="js/Chart.js"></script>
+<script>
+var canvas = document.getElementById('myChart');
+var data = {
+				labels: ["Energie opgehaald vandaag", "Highscore"],
+				datasets: [
+								{
+												label: "Energie",
+												backgroundColor: "white",
+												borderWidth: 0,
+												hoverBackgroundColor: "white",
+												data: [45, 319],
+								}
+				]
+};
+var option = {
+animation: {
+								duration:5000
+}
+
+};
+
+
+var myBarChart = Chart.Bar(canvas,{
+		data:data,
+		options:option
+});
+</script>
 						<div class="owl-testimonials bottom">
 
 						</div>
