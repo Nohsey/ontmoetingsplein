@@ -7,7 +7,6 @@ $loginData = new Login();
 
 if(isset($_POST['btlogin']))
 {
-
 	if (isset($_POST['usr']) && $_POST['pass']) {
 
 		$usr = $_POST['usr'];
@@ -15,24 +14,22 @@ if(isset($_POST['btlogin']))
 
 		if ($loginData->LoginFucntion($usr, $pass))
 		{
-				echo $userData->GetFirstName() ." ". $userData->GetLastName();
+				$user = $userData->GetFirstName() ." ". $userData->GetLastName();
 		}
 		else {
 				echo "niet goe";
-
 		}
 	}
 }
-
 ?>
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cardio: Free One Page Template by Luka Cvetinovic</title>
-	<meta name="description" content="Cardio is a free one page template made exclusively for Codrops by Luka Cvetinovic" />
-	<meta name="keywords" content="html template, css, free, one page, gym, fitness, web design" />
-	<meta name="author" content="Luka Cvetinovic for Codrops" />
+	<title>Ontmoetingsplein</title>
+	<meta name="description" content="Het Ontmoetingsplein is een duurzame groene speeltuin die energie opwekt." />
+	<meta name="keywords" content="Ontmoetingsplein, Helmond, Brandevoort, Speelplaats, Speeltuin, Evenementen, Slimme Wijk" />
+	<meta name="author" content="Michelle Broens, Rebecca Broens, Tom van Kaathoven, Kyle Ritchi & Mike Kotte" />
 	<!-- Favicons (created with http://realfavicongenerator.net/)-->
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
@@ -81,7 +78,14 @@ if(isset($_POST['btlogin']))
 					<li><a href="#intro">Introductie</a></li>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#">Evenementen</a>
-						<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Inloggen</a></li>
+<?php
+	if(isset($user)){
+		echo "<li><a href='#' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
+	}
+	else{
+		echo "<li><a href='#' data-toggle='modal' data-target='#modal1' class='btn btn-blue'>Inloggen</a></li>";
+	}
+?>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
