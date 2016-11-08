@@ -1,12 +1,20 @@
 <?php
 class DataBaseUser
 {
-	
-	
+
+
 //get
 
+public function GetIdByUsername($username)
+{
+	$connection = $_SESSION['Connection'];
+    $sql = "SELECT Gid FROM Gebruiker where GInlogNaam 	='$username'";
+	$result = mysqli_query($connection, $sql);
+    $ID = mysqli_fetch_array($result);
 
-	
+    return $ID[0];
+}
+
 Public function GetFirstName()
 {
 	$connection = $_SESSION['Connection'];
@@ -14,7 +22,7 @@ Public function GetFirstName()
     $sql = "SELECT GVoorNaam FROM Gebruiker where Gid=$GId";
 	$result = mysqli_query($connection, $sql);
     $name= mysqli_fetch_array($result);
-	
+
     return $name[0];
 }
 
@@ -25,7 +33,7 @@ Public function GetLastName()
     $sql = "SELECT GAchterNaam FROM Gebruiker where Gid=$GId";
 	$result = mysqli_query($connection, $sql);
     $lastname= mysqli_fetch_array($result);
-	
+
     return $lastname[0];
 }
 
@@ -36,7 +44,7 @@ Public function GetRightsId()
     $sql = "SELECT GRechten_id FROM Gebruiker where Gid=$GId";
 	$result = mysqli_query($connection, $sql);
     $rights= mysqli_fetch_array($result);
-	
+
     return $rights[0];
 }
 
@@ -47,7 +55,7 @@ public function GetLoginName()
     $sql = "SELECT GInlogNaam FROM Gebruiker where Gid=$GId";
 	$result = mysqli_query($connection, $sql);
     $loginName= mysqli_fetch_array($result);
-	
+
     return $loginName[0];
 }
 
@@ -58,7 +66,7 @@ public function GetPassword()
     $sql = "SELECT GWachtwoord FROM Gebruiker where Gid=$GId";
 	$result = mysqli_query($connection, $sql);
     $password= mysqli_fetch_array($result);
-	
+
     return $password[0];
 }
 
@@ -69,7 +77,7 @@ public function GetLastLogin()
     $sql = "SELECT GlaatsteLogin FROM Gebruiker where Gid=$GId";
 	$result = mysqli_query($connection, $sql);
     $lastLogin= mysqli_fetch_array($result);
-	
+
     return $lastLogin[0];
 }
 
@@ -81,7 +89,7 @@ public function GetMobileNumber()
     $sql = "SELECT Gmobiel_nummer FROM Gebruiker where Gid=$GId";
 	$result = mysqli_query($connection, $sql);
     $nummer= mysqli_fetch_array($result);
-	
+
     return $nummer[0];
 }
 
@@ -102,7 +110,7 @@ public function SetFirstName($FirstName)
     $GId = $_SESSION['GId'];
 	$sql = "UPDATE Gebruiker SET GVoorNaam='$FirstName' WHERE Gid=$GId";
 	$result = mysqli_query($connection, $sql);
-	
+
     return $FirstName;
 }
 
@@ -112,7 +120,7 @@ public function SetLastName($LastName)
     $GId = $_SESSION['GId'];
     $sql = "UPDATE Gebruiker SET GVoorNaam='$LastName' WHERE Gid=$GId";
 	$result = mysqli_query($connection, $sql);
-	
+
     return $LastName;
 }
 public function SetRights($rights)
@@ -121,7 +129,7 @@ public function SetRights($rights)
     $GId = $_SESSION['GId'];
     $sql = "UPDATE Gebruiker SET GVoorNaam='$rights' WHERE Gid=$GId";
 	$result = mysqli_query($connection, $sql);
-	
+
     return $rights;
 }
 public function SetLoginName($LoginName)
@@ -130,7 +138,7 @@ public function SetLoginName($LoginName)
     $GId = $_SESSION['GId'];
     $sql = "UPDATE Gebruiker SET GVoorNaam='$LoginName' WHERE Gid=$GId";
 	$result = mysqli_query($connection, $sql);
-	
+
     return $LoginName;
 }
 public function SetPassword($Password)
@@ -139,7 +147,7 @@ public function SetPassword($Password)
     $GId = $_SESSION['GId'];
     $sql = "UPDATE Gebruiker SET GVoorNaam='$Password' WHERE Gid=$GId";
 	$result = mysqli_query($connection, $sql);
-	
+
     return $Password;
 }
 
@@ -149,7 +157,7 @@ public function SetLastLogin($LastLogin)
     $GId = $_SESSION['GId'];
     $sql = "UPDATE Gebruiker SET GVoorNaam='$LastLogin' WHERE Gid=$GId";
 	$result = mysqli_query($connection, $sql);
-	
+
     return $LastLogin;
 }
 
@@ -159,7 +167,7 @@ public function SetMobileNumber($MobileNumber)
     $GId = $_SESSION['GId'];
     $sql = "UPDATE Gebruiker SET GVoorNaam='$MobileNumber' WHERE Gid=$GId";
 	$result = mysqli_query($connection, $sql);
-	
+
     return $MobileNumber;
 }
 }

@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include_once "DataBase.php";
+$userData = new DataBaseUser();
+$loginData = new Login();
 
+if(isset($_POST['btlogin']))
+{
+
+	if (isset($_POST['usr']) && $_POST['pass']) {
+
+		$usr = $_POST['usr'];
+		$pass = $_POST['pass'];
+
+		if ($loginData->LoginFucntion($usr, $pass))
+		{
+				echo $userData->GetFirstName() ." ". $userData->GetLastName();
+		}
+		else {
+				echo "niet goe";
+
+		}
+	}
+}
+
+?>
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -279,16 +303,16 @@
 			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
 				<h3 class="white">Inloggen</h3>
-				<form action="" class="popup-form">
-					<input type="text" class="form-control form-white" placeholder="Gebruikersnaam">
-					<input type="password" class="form-control form-white" placeholder="Wachtwoord">
+				<form action="" method="POST"  class="popup-form">
+					<input type="text" name="usr" class="form-control form-white" placeholder="Gebruikersnaam">
+					<input type="password" name="pass" class="form-control form-white" placeholder="Wachtwoord">
 					<div class="checkbox-holder text-left">
 						<div class="checkbox">
 							<input type="checkbox" value="None" id="squaredOne" name="check" />
 							<label for="squaredOne"><span>Onthoud mijn gegevens</span></label>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-submit">Inloggen</button>
+					<button type="submit" name="btlogin" class="btn btn-submit">Inloggen</button>
 				</form>
 			</div>
 		</div>
