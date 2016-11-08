@@ -782,7 +782,7 @@ footer .social-footer li:hover a {
 	position: relative;
 	padding: 45px 30px;
 	text-align: center;
-	background: url('../img/popup.jpg');
+	background: #E4572E;
 	box-shadow: none;
 	border-radius: 2px;
 }
@@ -923,7 +923,7 @@ footer .social-footer li:hover a {
 }
 
 .btn.btn-submit:hover {
-	color: #00a8ff;
+	color: #E4572E;
 	background: #fff;
 }
 
