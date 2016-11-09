@@ -18,7 +18,7 @@ public function CreateEvent($ETitel ,$EInhoud ,$AdminId)
 public function GetEventNameOnDate($date)
 {
     $connection = $_SESSION['Connection'];
-    $sql = "SELECT ETitel FROM `Evenementen` WHERE Datum='$date' ORDER BY BeginTijd";
+    $sql = "SELECT ETitel FROM `Evenementen` WHERE Datum='$date' AND `EindTijd` >= NOW() ORDER BY BeginTijd";
 	  $result = mysqli_query($connection, $sql);
     $titles = null;
     while($row = mysqli_fetch_array($result))
