@@ -269,38 +269,38 @@ if(isset($_POST['btlogin']))
 					</div>
 				</div>
 				<div class="col-md-6">
-					<div class="intro-table intro-table-third">
+					<div class="intro-table intro-table-third" style="padding: 20px;">
 						<h5 class="white heading">Happy Clients</h5>
-						<canvas id="myChart" width="400" height="200"></canvas>
+						<canvas id="myChart" width="400" height="200" style="background-color: white;"></canvas>
 
-<script src="js/Chart.js"></script>
-<script>
-var canvas = document.getElementById('myChart');
-var data = {
-				labels: ["Energie opgehaald vandaag", "Highscore"],
-				datasets: [
-								{
-												label: "Energie",
-												backgroundColor: "white",
-												borderWidth: 0,
-												hoverBackgroundColor: "white",
-												data: [45, 319],
-								}
-				]
-};
-var option = {
-animation: {
-								duration:5000
-}
+						<script src="js/Chart.js"></script>
+						<script>
+							var canvas = document.getElementById('myChart');
+							var data = {
+											labels: ["Energie opgehaald vandaag", "Highscore"],
+											datasets: [
+															{
+																			label: "Energie",
+																			backgroundColor: "#1ABC9C",
+																			borderWidth: 0,
+																			hoverBackgroundColor: "#14967c",
+																			data: [45, 319],
+															}
+											]
+							};
+							var option = {
+							animation: {
+															duration:5000
+							}
 
-};
+							};
 
 
-var myBarChart = Chart.Bar(canvas,{
-		data:data,
-		options:option
-});
-</script>
+							var myBarChart = Chart.Bar(canvas,{
+									data:data,
+									options:option
+							});
+						</script>
 						<div class="owl-testimonials bottom">
 
 						</div>
