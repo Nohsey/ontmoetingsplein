@@ -80,12 +80,73 @@
     </header>
     <section>
         <div class="cut cut-top"></div>
-        <div class="container">
-            <div class="intro-table intro-table-first" style="width: 200%; background-color: #1ABC9C;">
+        <div class="container" style="margin-bottom: -200px">
+            <div class="row intro-tables">
+                <div class="col-md-6">
+                    <div class="intro-table intro-table-first" style="width: 200%; height: 100%; background-color: #FFBA30; padding: 20px 70px;">
+                        <form action="" method="POST">
+                            <h3 class="white heading" style="text-align: center;">Uw profiel</h3>
+                            <div class="circle"></div>
+                            <table class="gegevens">
+                                <tr>
+                                    <th></th>
+                                    <th>Uw gegevens</th>
+                                </tr>
+                                <tr>
+                                    <th>Naam:</th>
+                                    <td> Input Voornaam & Achternaam van database </td>
+                                </tr>
+                                <tr>
+                                    <th>Telefoon:</th>
+                                    <td> Input telefoon van database</td>
+                                </tr>
+                                <tr>
+                                    <th>Gebruikersnaam</th>
+                                    <td> Input gebruikersnaam van database</td>
+                                </tr>
+                                <tr>
+                                    <th>Laatste login</th>
+                                    <td>Input laatste login van datbase</td>
+                                </tr>
+                            </table>
+                        </form>
+                        <br/>
+                        <h3 class="white heading" style="text-align: center;">Favoriete evenementen</h3>
+                        <div class="row services" style="margin-top: 270px;">
+
+                            <div class="col-md-4">
+                                <div class="service">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-child fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                    <h4 class="heading">Kinderdisco</h4>
+                                    <p class="description">Chocolate cake sugar plum gingerbread chocolate cake gingerbread tootsie roll chupa chups fruitcake. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-child fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                    <h4 class="heading">Voetbal toernooi</h4>
+                                    <p class="description">Gummi bears chupa chups danish lemon drops croissant. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-child fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                    <h4 class="heading">Pieten training</h4>
+                                    <p class="description">Chocolate chupa chups candy canes. Sweet roll marshmallow ice cream gummies cookie icing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
-        <div class="cut cut-bottom"></div>
     </section>
     <section class="section section-padded blue-bg">
         <div class="container">
