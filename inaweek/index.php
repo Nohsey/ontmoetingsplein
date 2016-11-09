@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <?php
 include_once "DataBase.php";
 $userData = new DataBaseUser();
@@ -27,7 +27,7 @@ if(isset($_POST['btlogin']))
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Ontmoetingsplein</title>
+	<title>Ontmoetingsplein - Homepagina</title>
 	<meta name="description" content="Het Ontmoetingsplein is een duurzame groene speeltuin die energie opwekt." />
 	<meta name="keywords" content="Ontmoetingsplein, Helmond, Brandevoort, Speelplaats, Speeltuin, Evenementen, Slimme Wijk" />
 	<meta name="author" content="Michelle Broens, Rebecca Broens, Tom van Kaathoven, Kyle Ritchi & Mike Kotte" />
@@ -100,7 +100,7 @@ if(isset($_POST['btlogin']))
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<h3 class="light white">Samen spelen,</h3>
-							<h1 class="white typed">Voor een beter milieu.</h1>
+							<h1 class="white typed">Voor een beter milieu</h1>
 						</div>
 					</div>
 				</div>
@@ -270,17 +270,17 @@ if(isset($_POST['btlogin']))
 				</div>
 				<div class="col-md-6">
 					<div class="intro-table intro-table-third" style="padding: 20px;">
-						<h5 class="white heading">Happy Clients</h5>
+						<h5 class="white heading">Opgehaalde engergie</h5>
 						<canvas id="myChart" width="400" height="200" style="background-color: white;"></canvas>
 
 						<script src="js/Chart.js"></script>
 						<script>
 							var canvas = document.getElementById('myChart');
 							var data = {
-											labels: ["Energie opgehaald vandaag", "Highscore"],
+											labels: ["Vandaag", "Totaal"],
 											datasets: [
 															{
-																			label: "Energie",
+																			label: "Energie in W",
 																			backgroundColor: "#1ABC9C",
 																			borderWidth: 0,
 																			hoverBackgroundColor: "#14967c",
@@ -308,44 +308,7 @@ if(isset($_POST['btlogin']))
 				</div>
 			</div>
 		</div>
-	</section>
-	<section id="services" class="section section-padded">
-		<div class="container">
-			<div class="row text-center title">
-				<h2>Services</h2>
-				<h4 class="light muted">Achieve the best results with our wide variety of training options!</h4>
-			</div>
-			<div class="row services">
-				<div class="col-md-4">
-					<div class="service home">
-						<div class="icon-holder">
-							<img src="img/icons/heart-blue.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Cardio Training</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="service home">
-						<div class="icon-holder">
-							<img src="img/icons/guru-blue.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Yoga Pilates</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="service home">
-						<div class="icon-holder">
-							<img src="img/icons/weight-blue.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Power Training</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="cut cut-bottom"></div>
+		<div class="cut cut-bottom" style="margin-bottom: 200px;"></div>
 	</section>
 	<section class="section section-padded blue-bg">
 		<div class="container">
@@ -354,18 +317,23 @@ if(isset($_POST['btlogin']))
 					<div class="owl-twitter owl-carousel">
 						<div class="item text-center">
 							<i class="icon fa fa-twitter"></i>
-							<h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-							<h4 class="light-white light">#health #training #exercise</h4>
+							<h4 class="white light">Onze site is online! Bekijk hem eens</h4>
+							<h4 class="light-white light">#Brandevoort #InovationIAW #Helmond</h4>
 						</div>
 						<div class="item text-center">
 							<i class="icon fa fa-twitter"></i>
-							<h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-							<h4 class="light-white light">#health #training #exercise</h4>
+							<h4 class="white light">Kom eens gezellig wat drinken of spelen bij het ontmoetingsplein</h4>
+							<h4 class="light-white light">#Gezellig #Speeltuin #Ontmoetingsplein</h4>
 						</div>
 						<div class="item text-center">
 							<i class="icon fa fa-twitter"></i>
-							<h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-							<h4 class="light-white light">#health #training #exercise</h4>
+							<h4 class="white light">Wil jij ook duurzame energie opwekken? Kom dan eens langs</h4>
+							<h4 class="light-white light">#GroeneEnergie #Duurzaam #Helmond</h4>
+						</div>
+						<div class="item text-center">
+							<i class="icon fa fa-twitter"></i>
+							<h4 class="white light">Je kunt op onze site ook evenementen aanvragen!</h4>
+							<h4 class="light-white light">#MovieNights #DansNight #Ontmoetingsplein</h4>
 						</div>
 					</div>
 				</div>
@@ -395,19 +363,14 @@ if(isset($_POST['btlogin']))
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 text-center-mobile">
-					<h3 class="white">Reserve a Free Trial Class!</h3>
-					<h5 class="light regular light-white">Shape your body and improve your health.</h5>
-					<a href="#" class="btn btn-blue ripple trial-button">Start Free Trial</a>
-				</div>
-				<div class="col-sm-6 text-center-mobile">
-					<h3 class="white">Opening Hours <span class="open-blink"></span></h3>
+					<h3 class="white">Openings uren<span class="open-blink"></span></h3>
 					<div class="row opening-hours">
 						<div class="col-sm-6 text-center-mobile">
-							<h5 class="light-white light">Mon - Fri</h5>
+							<h5 class="light-white light">Maandag - Vrijag</h5>
 							<h3 class="regular white">9:00 - 22:00</h3>
 						</div>
 						<div class="col-sm-6 text-center-mobile">
-							<h5 class="light-white light">Sat - Sun</h5>
+							<h5 class="light-white light">Zaterdag - Zondag</h5>
 							<h3 class="regular white">10:00 - 18:00</h3>
 						</div>
 					</div>
@@ -415,13 +378,13 @@ if(isset($_POST['btlogin']))
 			</div>
 			<div class="row bottom-footer text-center-mobile">
 				<div class="col-sm-8">
-					<p>&copy; 2015 All Rights Reserved. Powered by <a href="http://www.phir.co/">PHIr</a> exclusively for <a href="http://tympanus.net/codrops/">Codrops</a></p>
+					<p>&copy; 2016 Tom, Kyle, Michelle, Rebecca & Mike <a href="http://www.summa-ict.nl/" target="_blank">SUMMA ICT</a></p>
 				</div>
 				<div class="col-sm-4 text-right text-center-mobile">
 					<ul class="social-footer">
-						<li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="http://www.twitter.com/codrops"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="https://plus.google.com/101095823814290637419"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
 					</ul>
 				</div>
 			</div>
