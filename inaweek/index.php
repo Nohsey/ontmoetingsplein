@@ -179,8 +179,10 @@ if(isset($_POST['btlogin']))
 																$title =  $evenementdata->GetEventNameOnDate($arraydatedb[$i]);
 
 
-
 																if (isset($title[0][0])) {
+
+																	$starttitletime = $evenementdata->GetEventBTime($title[0][0]);
+																	$eindtitletime = $evenementdata->GetEventETime($title[0][0]);
 																	# code...
 
 																	echo'
@@ -189,7 +191,7 @@ if(isset($_POST['btlogin']))
 																					<h5 class="regular white">'; echo $title[0][0];  echo'</h5>
 																			</div>
 																			<div class="col-xs-6 text-right">
-																				<h5 class="white">8:30 - 10:00</h5>
+																				<h5 class="white">'; echo $starttitletime. " - " . $eindtitletime;  echo'</h5>
 																			</div>
 																		</div>';
 																}
@@ -202,6 +204,9 @@ if(isset($_POST['btlogin']))
 																		</div>';
 																}
 																if (isset($title[1][0])) {
+
+																	$starttitletime = $evenementdata->GetEventBTime($title[1][0]);
+																	$eindtitletime = $evenementdata->GetEventETime($title[1][0]);
 																	# code...
 
 																	echo'
@@ -210,7 +215,7 @@ if(isset($_POST['btlogin']))
 																				<h5 class="regular white">'; echo $title[1][0]; echo'</h5>
 																			</div>
 																			<div class="col-xs-6 text-right">
-																				<h5 class="white">8:30 - 10:00</h5>
+																				<h5 class="white">'; echo $starttitletime. " - " . $eindtitletime;  echo'</h5>
 																			</div>
 																		</div>';
 															}
@@ -223,6 +228,9 @@ if(isset($_POST['btlogin']))
 																	</div>';
 															}
 															if (isset($title[2][0])) {
+
+																$starttitletime = $evenementdata->GetEventBTime($title[2][0]);
+																$eindtitletime = $evenementdata->GetEventETime($title[2][0]);
 																# code...
 
 															echo'
@@ -231,7 +239,7 @@ if(isset($_POST['btlogin']))
 																	<h5 class="regular white">'; echo $title[2][0	]; echo'</h5>
 																</div>
 																<div class="col-xs-6 text-right">
-																	<h5 class="white">8:30 - 10:00</h5>
+																	<h5 class="white">'; echo $starttitletime. " - " . $eindtitletime;  echo'</h5>
 																</div>
 															</div>';
 														}
