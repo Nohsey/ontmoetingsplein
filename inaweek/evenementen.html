@@ -66,16 +66,20 @@
 	</nav>
 	<header id="intro">
 		<div class="container">
-			<div class="table">
-				<div class="header-text">
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<h3 class="light white">Samen spelen,</h3>
-							<h1 class="white typed">Voor een beter milieu.</h1>
-						</div>
-					</div>
-				</div>
-			</div>
+			<form class="search_evenementen">
+				<table>
+					<tr>
+						<td><input type="text" placeholder="Trefwoord/Datum"></td>
+						<td>
+							<select id="search_on">
+                <option value="on_date">Datum</option>
+                <option value="on_word">Trefwoord</option>
+              </select>
+						</td>
+						<td><button value="search">Zoeken</button></td>
+					</tr>
+				</table>
+			</form>
 		</div>
 	</header>
 	<section>
