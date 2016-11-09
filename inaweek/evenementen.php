@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
 	<meta charset="UTF-8">
@@ -49,14 +49,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="img/logo.png" data-active-url="img/logo-active.png" alt=""></a>
+				<a class="navbar-brand" href="index.php"><img src="img/logo.png" data-active-url="img/logo-active.png" alt=""></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
 					<li><a href="#intro">Introductie</a></li>
 					<li><a href="#services">Services</a></li>
-					<li><a href="evenementen.html">Evenementen</a>
+					<li><a href="evenementen.php">Evenementen</a>
 						<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Inloggen</a></li>
 				</ul>
 			</div>
