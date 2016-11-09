@@ -108,15 +108,17 @@ if(isset($_POST['btlogin']))
 		<div class="container" style="margin-bottom: -200px">
 			<div class="row intro-tables">
 				<div class="col-md-6">
-					<div class="intro-table intro-table-first" style="width: 200%; background-color: #1ABC9C;">
+					<div class="intro-table intro-table-first" style="width: 200%; height:120%; background-color: #1ABC9C; padding: 20px 70px;">
 						<form action="" method="POST">
-						<h5 class="white heading" style="text-align: center;">Evenementen aanvragen:</h5>
-							<input type="text" name="Vname" class="form-control form-white" placeholder="Voornaam">
-							<input type="text" name="tvg" class="form-controE form-white" placeholder="TVG"><br>
-							<input type="text" name="Aname" class="form-controlE form-white" placeholder="Achternaam">
-							<input type="email" name="Email" class="form-controlE form-white" placeholder="E-mail">
-							<input type="text" name="Tel" class="form-controlE form-white" placeholder="Telefoonnummer">
-							<input type="text" name="Omsch" class="form-controlE form-white" placeholder="Omschrijving">
+						<h3 class="white heading" style="text-align: center;">Evenementen aanvragen:</h3>
+						<h5 class="white heading" >Contactgegevens:</h5>
+							<input type="text" name="Vname" style="width: 40%;"  placeholder="Voornaam" required>
+							<input type="text" name="tvg" style="width: 19%;" placeholder="TVG">
+							<input type="text" name="Aname" style="width: 40%;" placeholder="Achternaam" required><br/><br/>
+							<input type="email" name="Email" style="width: 60%;"placeholder="E-mail" required>
+							<input type="text" name="Tel" style="width: 39%;" placeholder="Telefoonnummer" required><br/><br/>
+							<h5 class="white heading">Omschrijving van het evenement:</h5>
+							<textarea name="Omsch" cols="10" rows="5" style="width: 100%;"></textarea><br/>
 							<button type="submit" name="btAanvraag" class="btn btn-submit">Vraag evenement aan</button>
 						</form>
 
