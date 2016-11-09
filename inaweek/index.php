@@ -77,11 +77,11 @@ if(isset($_POST['btlogin']))
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
 					<li><a href="#intro">Introductie</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#">Evenementen</a>
+					<li><a href="evenementen.php">Evenementen</a>
 <?php
-	if(isset($user)){
-		echo "<li><a href='#' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
+	if(isset($_SESSION['GId'])){
+		$user = $userData->GetFirstName() ." ". $userData->GetLastName();
+		echo "<li><a href='uitloggen.php' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
 	}
 	else{
 		echo "<li><a href='#' data-toggle='modal' data-target='#modal1' class='btn btn-blue'>Inloggen</a></li>";
