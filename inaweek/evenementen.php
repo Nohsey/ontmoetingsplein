@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="nl">
+<?php
+include_once "DataBase.php";
+$userData = new DataBaseUser();
+$evenementdata = new DataBaseEvenement();
+$loginData = new Login();
 
+if(isset($_POST['btlogin']))
+{
+	if (isset($_POST['usr']) && $_POST['pass']) {
+
+		$usr = $_POST['usr'];
+		$pass = $_POST['pass'];
+
+		if ($loginData->LoginFucntion($usr, $pass))
+		{
+				$user = $userData->GetFirstName() ." ". $userData->GetLastName();
+		}
+		else {
+				echo "niet goe";
+		}
+	}
+}
+?>
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,10 +76,17 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					<li><a href="#intro">Introductie</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="evenementen.php">Evenementen</a>
-						<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Inloggen</a></li>
+					<li><a href="index.php">Introductie</a></li>
+					<li><a href="#intro">Evenementen</a>
+						<?php
+							if(isset($_SESSION['GId'])){
+								$user = $userData->GetFirstName() ." ". $userData->GetLastName();
+								echo "<li><a href='#' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
+							}
+							else{
+								echo "<li><a href='#' data-toggle='modal' data-target='#modal1' class='btn btn-blue'>Inloggen</a></li>";
+							}
+						?>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -179,16 +208,16 @@
 			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
 				<h3 class="white">Inloggen</h3>
-				<form action="" class="popup-form">
-					<input type="text" class="form-control form-white" placeholder="Gebruikersnaam">
-					<input type="password" class="form-control form-white" placeholder="Wachtwoord">
+				<form action="" method="POST"  class="popup-form">
+					<input type="text" name="usr" class="form-control form-white" placeholder="Gebruikersnaam">
+					<input type="password" name="pass" class="form-control form-white" placeholder="Wachtwoord">
 					<div class="checkbox-holder text-left">
 						<div class="checkbox">
 							<input type="checkbox" value="None" id="squaredOne" name="check" />
 							<label for="squaredOne"><span>Onthoud mijn gegevens</span></label>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-submit">Inloggen</button>
+					<button type="submit" name="btlogin" class="btn btn-submit">Inloggen</button>
 				</form>
 			</div>
 		</div>

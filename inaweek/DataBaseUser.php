@@ -1,5 +1,4 @@
 <?php
-include_once "DataBase.php";
 class DataBaseUser
 {
 
@@ -14,15 +13,6 @@ public function GetIdByUsername($username)
     $ID = mysqli_fetch_array($result);
 
     return $ID[0];
-}
-
-public function createUser($loginName,$LoginPassword,$loginEmail,$GFirstName,$GLastName)
-{
-	$connection = $_SESSION['Connection'];
-    $sql = "INSERT INTO Gebruiker (`GEmail`, `GInlogNaam`, `GWachtwoord`, `GVoorNaam`, `GAchterNaam`) VALUES ('$loginEmail','$loginName', '$LoginPassword', '$GFirstName', '$GLastName')";
-	$result = mysqli_query($connection, $sql);
-	var_dump($result);
-	var_dump($sql);
 }
 
 Public function GetFirstName()
