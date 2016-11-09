@@ -261,7 +261,7 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 }
 
 .navbar {
-	padding: 25px 0;
+	top: 50px;
 }
 
 .container {
@@ -448,11 +448,16 @@ section {
 	}
 }
 
+.services {
+	margin: 40px 0;
+	padding-bottom: 100px;
+}
+
 .service {
 	width: 100%;
-	min-height: 320px;
+	height: 320px;
 	margin: -250px 0;
-	margin-bottom: 300px;
+	margin-bottom: 140px;
 	text-align: center;
 	background: white;
 	border: 2px solid #E4572E;
