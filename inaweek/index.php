@@ -3,6 +3,7 @@
 <?php
 include_once "DataBase.php";
 $userData = new DataBaseUser();
+$evenementdata = new DataBaseEvenement();
 $loginData = new Login();
 
 if(isset($_POST['btlogin']))
@@ -160,44 +161,90 @@ if(isset($_POST['btlogin']))
 										break;
 								}
 								$arraydate= [$datetime->format('d-m-Y'), $datetime1->format('d-m-Y'), $datetime2->format('d-m-Y')];
-
+								$arraydatedb = [$datetime->format('Y-m-d'), $datetime1->format('Y-m-d'), $datetime2->format('Y-m-d')];
 
 								for ($i=0; $i < 3; $i++) {
 
-									echo '	<div class="item">
-																<div class="schedule-row row">
-																	<div class="col-xs-6">
-																		<h4 class="regular white">'; echo "$arrayday[$i]"; echo'</h4>
-																	</div>
-																	<div class="col-xs-6 text-right">
-																		<h4 class="white">'; echo "$arraydate[$i]"; echo'</h4>
-																	</div>
-																</div>
+									echo'
+										<div class="item">
+											<div class="schedule-row row">
+												<div class="col-xs-6">
+													<h4 class="regular white">'; echo "$arrayday[$i]"; echo'</h4>
+												</div>
+												<div class="col-xs-6 text-right">
+													<h4 class="white">'; echo "$arraydate[$i]"; echo'</h4>
+												</div>
+											</div>';
+
+																$title =  $evenementdata->GetEventNameOnDate($arraydatedb[$i]);
 
 
-																<div class="schedule-row row">
-																	<div class="col-xs-6">
-																		<h5 class="regular white">Early Exercise</h5>
-																	</div>
-																	<div class="col-xs-6 text-right">
-																		<h5 class="white">8:30 - 10:00</h5>
-																	</div>
+
+																if (isset($title[0][0])) {
+																	# code...
+
+																	echo'
+																		<div class="schedule-row row">
+																			<div class="col-xs-6">
+																					<h5 class="regular white">'; echo $title[0][0];  echo'</h5>
+																			</div>
+																			<div class="col-xs-6 text-right">
+																				<h5 class="white">8:30 - 10:00</h5>
+																			</div>
+																		</div>';
+																}
+																else {
+																	echo'
+																		<div class="schedule-row row">
+																			<div class="col-xs-12">
+																				<h5 class="regular white">Geen beschikbare Evenementen</h5>
+																			</div>
+																		</div>';
+																}
+																if (isset($title[1][0])) {
+																	# code...
+
+																	echo'
+																		<div class="schedule-row row">
+																			<div class="col-xs-6">
+																				<h5 class="regular white">'; echo $title[1][0]; echo'</h5>
+																			</div>
+																			<div class="col-xs-6 text-right">
+																				<h5 class="white">8:30 - 10:00</h5>
+																			</div>
+																		</div>';
+															}
+															else {
+																echo'
+																	<div class="schedule-row row">
+																		<div class="col-xs-12">
+																			<h5 class="regular white">Geen beschikbare Evenementen</h5>
+																		</div>
+																	</div>';
+															}
+															if (isset($title[2][0])) {
+																# code...
+
+															echo'
+															<div class="schedule-row row">
+																<div class="col-xs-6">
+																	<h5 class="regular white">'; echo $title[2][0	]; echo'</h5>
 																</div>
-																<div class="schedule-row row">
-																	<div class="col-xs-6">
-																		<h5 class="regular white">Early Exercise</h5>
-																	</div>
-																	<div class="col-xs-6 text-right">
-																		<h5 class="white">8:30 - 10:00</h5>
-																	</div>
+																<div class="col-xs-6 text-right">
+																	<h5 class="white">8:30 - 10:00</h5>
 																</div>
+															</div>';
+														}
+														else {
+															echo'
 																<div class="schedule-row row">
 																	<div class="col-xs-12">
 																		<h5 class="regular white">Geen beschikbare Evenementen</h5>
 																	</div>
-																</div>
+																</div>';
+														}
 
-
+														echo'
 																<div class="schedule-row row">
 																	<div align="center" class="col-xs-12">
 																		<a href="#"><h4 class="regular white">More</h4></a>
@@ -205,7 +252,10 @@ if(isset($_POST['btlogin']))
 
 																</div>
 															</div>';
+
 														}
+
+
 							 ?>
 						</div>
 					</div>
