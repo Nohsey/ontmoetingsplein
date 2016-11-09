@@ -660,7 +660,7 @@ section {
 
 footer {
 	padding: 140px 0 40px;
-	background: url('../img/footer.jpg');
+	background: url('../img/footer.png');
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -1195,12 +1195,13 @@ footer .social-footer li:hover a {
 
 .circle {
 	float: left;
-	margin-right: 70px;
-      width:180px;
-      height: 180px;
-      -webkit-border-radius: 150px;
-      -moz-border-radius: 150px;
-      border-radius: 100px;
-      background: #FFE5A0;
-			border: 2px solid white;
+	margin-right: 65px;
+  width:180px;
+  height: 180px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  border-radius: 100px;
+  background-image: url(../img/profilepic.jpeg);
+	background-size: 180px 180px;
+	border: 2px solid white;
     }

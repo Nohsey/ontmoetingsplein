@@ -80,7 +80,7 @@
     </header>
     <section>
         <div class="cut cut-top"></div>
-        <div class="container" style="margin-bottom: -200px">
+        <div class="container">
             <div class="row intro-tables">
                 <div class="col-md-6">
                     <div class="intro-table intro-table-first" style="width: 200%; height: 100%; background-color: #FFBA30; padding: 20px 70px;">
@@ -94,19 +94,23 @@
                                 </tr>
                                 <tr>
                                     <th>Naam:</th>
-                                    <td> Input Voornaam & Achternaam van database </td>
+                                    <td>Mike Kotte</td>
                                 </tr>
                                 <tr>
                                     <th>Telefoon:</th>
-                                    <td> Input telefoon van database</td>
+                                    <td>0612345678</td>
+                                </tr>
+                                <tr>
+                                    <th>E-mail:</th>
+                                    <td>kotte.mike@gmail.com</td>
                                 </tr>
                                 <tr>
                                     <th>Gebruikersnaam</th>
-                                    <td> Input gebruikersnaam van database</td>
+                                    <td>mike.kotte</td>
                                 </tr>
                                 <tr>
                                     <th>Laatste login</th>
-                                    <td>Input laatste login van datbase</td>
+                                    <td><?php date_default_timezone_set("Europe/Amsterdam"); echo date("H:i");?></td>
                                 </tr>
                             </table>
                         </form>
@@ -147,6 +151,7 @@
 
             </div>
         </div>
+        <div class="cut cut-bottom"></div>
     </section>
     <section class="section section-padded blue-bg">
         <div class="container">
