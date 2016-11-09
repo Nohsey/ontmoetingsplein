@@ -1,5 +1,5 @@
 <?php
-session_start();
+include_once "DataBase.php";
 
 		$servername = "www.kevinkotte.nl";
         $username = "kevink_helmond";
@@ -11,7 +11,6 @@ session_start();
 $_SESSION['Connection'] = $connection;
 $_SESSION['GId'] = 1;
 
-include_once "..\DataBaseUser.php";
 $database = new DataBaseUser();
 
 $FirstName = $database->GetFirstName();
@@ -47,4 +46,8 @@ $FirstName = rand(1,10);
 $FirstName = $database->SetFirstName($FirstName);
 var_dump($FirstName);
 echo ($FirstName);
+
+include_once "Register.php";
+$register = new RegisterClass();
+$register->register("GVD","123","HenkKotte@hotmail.com","Henk","Kotte");
 ?>

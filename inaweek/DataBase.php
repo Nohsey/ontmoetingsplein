@@ -9,6 +9,7 @@ session_start();
         $connection = new mysqli($servername,$username,$password,$dbname);
 
 $_SESSION['Connection'] = $connection;
+$_SESSION['GId'] = 1;
 
 include_once "DataBaseUser.php";
 include_once "Login.php";
