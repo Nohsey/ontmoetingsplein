@@ -261,7 +261,7 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 }
 
 .navbar {
-	padding: 25px 0;
+	top: 50px;
 }
 
 .container {
@@ -448,11 +448,16 @@ section {
 	}
 }
 
+.services {
+	margin: 40px 0;
+	padding-bottom: 100px;
+}
+
 .service {
 	width: 100%;
-	min-height: 320px;
+	height: 320px;
 	margin: -250px 0;
-	margin-bottom: 300px;
+	margin-bottom: 140px;
 	text-align: center;
 	background: white;
 	border: 2px solid #E4572E;
@@ -509,6 +514,10 @@ section {
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
+}
+
+.home {
+	margin: 0px !important;
 }
 
 .team {
@@ -651,7 +660,7 @@ section {
 
 footer {
 	padding: 140px 0 40px;
-	background: url('../img/footer.jpg');
+	background: url('../img/footer.png');
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -1108,4 +1117,53 @@ footer .social-footer li:hover a {
 
 .fa-child {
 		color: #E4572E;
+}
+
+/* Zoek tabel */
+.search_evenementen {
+  text-align: center;
+  margin: auto;
+  margin-top: 515px;
+  color: #333333;
+}
+
+.search_evenementen table {
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+
+.search_evenementen td {
+  border: 2px solid #92C14D;
+}
+
+.search_evenementen input, button {
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  color: #333333;
+  padding-left: 10px;
+}
+
+.search_evenementen select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 10px;
+}
+
+.search_evenementen button{
+ 	background: #15A7E1;
+  color: white;
+  padding: 10px 10px 10px 5px;
+}
+
+.search_evenementen button:hover {
+  background: #43B8E7;
+}
+
+.search_evenementen td:hover {
+  border-color: #43B8E7;
 }
