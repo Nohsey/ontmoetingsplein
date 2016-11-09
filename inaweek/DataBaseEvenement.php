@@ -29,4 +29,24 @@ public function GetEventNameOnDate($date)
     
     return $titles;
 }
+
+public function GetEventBTime($title)
+{
+	$connection = $_SESSION['Connection'];
+    $sql = "SELECT BeginTijd FROM Evenementen where ETitel=$title";
+	$result = mysqli_query($connection, $sql);
+    $BTijd= mysqli_fetch_array($result);
+
+    return $BTijd[0];
+}
+
+public function GetEventETime($title)
+{
+	$connection = $_SESSION['Connection'];
+    $sql = "SELECT EindTijd FROM Evenementen where ETitel=$title";
+	$result = mysqli_query($connection, $sql);
+    $ETijd= mysqli_fetch_array($result);
+
+    return $ETijd[0];
+}
 }
