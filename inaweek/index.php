@@ -309,7 +309,7 @@ var myBarChart = Chart.Bar(canvas,{
 			</div>
 			<div class="row services">
 				<div class="col-md-4">
-					<div class="service">
+					<div class="service home">
 						<div class="icon-holder">
 							<img src="img/icons/heart-blue.png" alt="" class="icon">
 						</div>
@@ -318,7 +318,7 @@ var myBarChart = Chart.Bar(canvas,{
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="service">
+					<div class="service home">
 						<div class="icon-holder">
 							<img src="img/icons/guru-blue.png" alt="" class="icon">
 						</div>
@@ -327,7 +327,7 @@ var myBarChart = Chart.Bar(canvas,{
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="service">
+					<div class="service home">
 						<div class="icon-holder">
 							<img src="img/icons/weight-blue.png" alt="" class="icon">
 						</div>

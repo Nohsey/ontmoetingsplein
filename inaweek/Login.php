@@ -20,7 +20,7 @@ class Login
         $LoginPass = $row['GWachtwoord'];
 
         if ($LoginUser == $usr && $LoginPass == $pass) {
-          $_SESSION['Gid'] = $User->GetIdByUsername($LoginUser);
+          $_SESSION['GId'] = $User->GetIdByUsername($LoginUser);
 
           return true;
         }
