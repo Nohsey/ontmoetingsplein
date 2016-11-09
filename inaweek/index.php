@@ -255,7 +255,7 @@ if(isset($_POST['btlogin']))
 														echo'
 																<div class="schedule-row row">
 																	<div align="center" class="col-xs-12">
-																		<a href="#"><h4 class="regular white">More</h4></a>
+																		<a href="evenementen.html"><h4 class="regular white">More</h4></a>
 																	</div>
 
 																</div>
