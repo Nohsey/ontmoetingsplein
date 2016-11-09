@@ -516,6 +516,10 @@ section {
 	transform: scale(1);
 }
 
+.home {
+	margin: 0px; !IMPORTANT
+}
+
 .team {
 	margin: 80px 0;
 	padding-bottom: 60px;
