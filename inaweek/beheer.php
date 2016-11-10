@@ -102,7 +102,7 @@ if(isset($_POST['btlogin']))
 		<div class="cut cut-top"></div>
 		<div class="container">
 
-			<div class="row services">
+			<div class="row services"  style="margin-top:-500px;">
 
 				<?php
 
