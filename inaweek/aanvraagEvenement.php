@@ -126,7 +126,7 @@ if(isset($_POST['btlogin']))
 							<input type="date" name="eDate" style="width: 20%; padding: 10px; color: #1ABC9C;" placeholder="Datum" required>
 							<input type="text" name="eBtijd" style="width: 19%; padding: 10px; color: #1ABC9C;" placeholder="Begin tijd" required>
 							<input type="text" name="eEtijd" style="width: 19%; padding: 10px; color: #1ABC9C;" placeholder="Eind tijd" required><br/><br/>
-							<textarea name="eInhoud" cols="10" rows="10" style="width: 100%; padding: 10px; color: #1ABC9C;" placeholder="Omschrijving van het evenement"  required></textarea> <br/>><br/><br/><br/>
+							<textarea name="eInhoud" cols="10" rows="10" style="width: 100%; padding: 10px; color: #1ABC9C;" placeholder="Omschrijving van het evenement"  required></textarea><br/><br/><br/><br/>
 							<button type="submit" name="btAanvraag" class="btn btn-submit">Vraag evenement aan</button><br><br><br>
 						</form>
 						<?php
