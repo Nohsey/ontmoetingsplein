@@ -18,7 +18,7 @@ public function CreateEvent($ETitel ,$EInhoud ,$AdminId)
 public function GetEventNameOnDate($date)
 {
     $connection = $_SESSION['Connection'];
-    $sql = "SELECT ETitel FROM `Evenementen` WHERE Datum='$date' AND `EindTijd` >= NOW() ORDER BY BeginTijd";
+    $sql = "SELECT ETitel FROM `Evenementen` WHERE Datum='$date' AND `EindTijd` >= NOW() ORDER BY Datum";
 	  $result = mysqli_query($connection, $sql);
     $titles = null;
     while($row = mysqli_fetch_array($result))
@@ -32,7 +32,7 @@ public function GetEventNameOnDate($date)
 public function GetEventName()
 {
     $connection = $_SESSION['Connection'];
-    $sql = "SELECT ETitel FROM `Evenementen` WHERE `EindTijd` >= NOW() AND `Datum` >= CURDATE() ORDER BY BeginTijd";
+    $sql = "SELECT ETitel FROM `Evenementen` WHERE `EindTijd` >= NOW() AND `Datum` >= CURDATE() ORDER BY Datum";
 	  $result = mysqli_query($connection, $sql);
     $titles = null;
     while($row = mysqli_fetch_array($result))
@@ -47,7 +47,7 @@ public function GetEventName()
 public function GetEventinhoud($title)
 {
     $connection = $_SESSION['Connection'];
-    $sql = "SELECT EInhoud FROM `Evenementen` WHERE `EindTijd` >= NOW() AND `Datum` >= CURDATE() AND `ETitel`='$title'  ORDER BY BeginTijd";
+    $sql = "SELECT EInhoud FROM `Evenementen` WHERE `EindTijd` >= NOW() AND `Datum` >= CURDATE() AND `ETitel`='$title'  ORDER BY Datum";
 	  $result = mysqli_query($connection, $sql);
     $EInhoud = null;
     while($row = mysqli_fetch_array($result))
@@ -62,7 +62,7 @@ public function GetEventinhoud($title)
 public function GetEventTimeStart($title)
 {
     $connection = $_SESSION['Connection'];
-    $sql = "SELECT BeginTijd FROM `Evenementen` WHERE `EindTijd` >= NOW() AND `Datum` >= CURDATE() AND `ETitel`='$title'  ORDER BY BeginTijd";
+    $sql = "SELECT BeginTijd FROM `Evenementen` WHERE `EindTijd` >= NOW() AND `Datum` >= CURDATE() AND `ETitel`='$title'  ORDER BY Datum";
 	  $result = mysqli_query($connection, $sql);
     $Btijd = null;
     while($row = mysqli_fetch_array($result))
@@ -77,7 +77,7 @@ public function GetEventTimeStart($title)
 public function GetEventTimeEind($title)
 {
     $connection = $_SESSION['Connection'];
-    $sql = "SELECT EindTijd FROM `Evenementen` WHERE `EindTijd` >= NOW() AND `Datum` >= CURDATE() AND `ETitel`='$title'  ORDER BY BeginTijd";
+    $sql = "SELECT EindTijd FROM `Evenementen` WHERE `EindTijd` >= NOW() AND `Datum` >= CURDATE() AND `ETitel`='$title'  ORDER BY Datum";
 	  $result = mysqli_query($connection, $sql);
     $Etijd = null;
     while($row = mysqli_fetch_array($result))
