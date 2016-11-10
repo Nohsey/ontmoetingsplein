@@ -111,8 +111,8 @@ if(isset($_POST['btlogin']))
 		<div class="cut cut-top"></div>
 		<div class="container" style="margin-bottom: -200px">
 			<div class="row intro-tables">
-				<div class="col-md-6">
-						<div class="intro-table intro-table-first" style="width: 200%; height:120%; background-color: #1ABC9C; padding: 20px 70px; margin-bottom: -200px;">
+				<div class="col-md-12">
+						<div class="intro-table intro-table-first" style="width: 100%; height:100%; background-color: #1ABC9C; padding: 20px 70px; margin-bottom: -200px;">
 						<form action="" method="POST">
 						<h3 class="white heading" style="text-align: center;">Evenementen aanvragen</h3>
 						<h5 class="white heading" >Contactgegevens:</h5>
