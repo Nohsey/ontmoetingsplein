@@ -116,65 +116,51 @@ if(isset($_POST['btlogin']))
 		<div class="container">
 
 			<div class="row services">
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<i class="fa fa-child fa-4x" aria-hidden="true"></i>
-						</div>
-						<h4 class="heading">Kinderdisco</h4>
-						<p class="description">Chocolate cake sugar plum gingerbread chocolate cake gingerbread tootsie roll chupa chups fruitcake. Bonbon soufflé sweet candy canes fruitcake. </p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<i class="fa fa-child fa-4x" aria-hidden="true"></i>
-						</div>
-						<h4 class="heading">Voetbal toernooi</h4>
-						<p class="description">Gummi bears chupa chups danish lemon drops croissant. Gummi bears topping biscuit dragée gummies danish macaroon. </p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<i class="fa fa-child fa-4x" aria-hidden="true"></i>
-						</div>
-						<h4 class="heading">Pieten training</h4>
-						<p class="description">Chocolate danish halvah chupa chups candy canes tart bear claw. Pie chocolate sweet roll. Sweet roll marshmallow ice cream gummies cookie icing.</p>
-					</div>
-				</div>
-			</div>
 
-			<div class="row services">
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<i class="fa fa-child fa-4x" aria-hidden="true"></i>
-						</div>
-						<h4 class="heading">Kinderdisco</h4>
-						<p class="description">Chocolate cake sugar plum gingerbread chocolate cake gingerbread tootsie roll chupa chups fruitcake. Bonbon soufflé sweet candy canes fruitcake. </p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<i class="fa fa-child fa-4x" aria-hidden="true"></i>
-						</div>
-						<h4 class="heading">Voetbal toernooi</h4>
-						<p class="description">Gummi bears chupa chups danish lemon drops croissant. Gummi bears topping biscuit dragée gummies danish macaroon. </p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<i class="fa fa-child fa-4x" aria-hidden="true"></i>
-						</div>
-						<h4 class="heading">Pieten training</h4>
-						<p class="description">Chocolate danish halvah chupa chups candy canes tart bear claw. Pie chocolate sweet roll. Sweet roll marshmallow ice cream gummies cookie icing.</p>
-					</div>
-				</div>
-			</div>
+				<?php
 
+				$count  =  $evenementdata->CountEvent();
+
+
+
+				for ($i=0; $i < $count; $i++) {
+
+					$title =  $evenementdata->GetEventName();
+					$inhoud =  $evenementdata->GetEventinhoud($title[$i][0]);
+					$starttitletime = $evenementdata->GetEventBTime($title[$i][0]);
+					$eindtitletime = $evenementdata->GetEventETime($title[$i][0]);
+					$datum = $evenementdata->GetEventData($title[$i][0]);
+
+
+
+												echo'
+												<div class="col-md-4">
+													<div class="service">
+														<div class="icon-holder">
+															<i class="fa fa-child fa-4x" aria-hidden="true"></i>
+														</div>
+														<h4 class="heading">'; echo $title[$i][0];  echo'</h4>
+														<h5 class="heading">'; echo $starttitletime. " - " . $eindtitletime. " &nbsp; &nbsp; &nbsp;	". $datum;  echo'</h5>
+														<p class="description">'; echo $inhoud;  echo'</p>
+													</div>
+												</div>';
+
+												if ($i % 3 == 2) {
+												echo '</div>';
+												echo '<div class="row services">';
+												}
+
+
+}
+
+
+
+				 ?>
+
+
+
+
+			 </div>
 		</div>
 		<div class="cut cut-bottom"></div>
 	</section>
