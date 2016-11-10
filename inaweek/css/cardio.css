@@ -1206,15 +1206,16 @@ footer .social-footer li:hover a {
 	border: 2px solid white;
     }
 
-		.btn-uitlog {
-			width: 170px;
+		.btnuitlog{
+			margin-top: -60px;
+			width: 180px;
 			height: 100%;
 			float: left;
 			padding: 5px;
 			color: white;
-			background: #E4572E;
+			background: #E4572E !important;
 		}
 
-		.btn-uitlog:hover {
-			background: #FF6A3D;
+		.btnuitlog:hover {
+			background: #FF6A3D !important;
 		}
