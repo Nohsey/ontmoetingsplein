@@ -102,8 +102,8 @@ if(isset($_POST['btlogin']))
 				<div class="header-text">
 					<div class="row">
 						<div class="col-md-12 text-center">
-							<h3 class="light white">Samen spelen,</h3>
-							<h1 class="white typed">Voor een beter milieu.</h1>
+							<h3 class="light white">Van Buurt in Beweging naar</h3>
+							<h1 class="white typed">Energie voor de buurt!</h1>
 						</div>
 					</div>
 				</div>
