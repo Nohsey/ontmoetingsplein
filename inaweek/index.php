@@ -102,10 +102,10 @@ if(isset($_POST['btlogin']))
 			<div class="table">
 				<div class="header-text">
 					<div class="row">
+						<img src="img/afbplein.png" width="35%" style="margin-top: -15%">
 						<div class="col-md-12 text-center">
-							<h1 class="white typed">Speelwerkplaats</h1>
-							<h3 class="light white">Samen spelen,</h3>
-							<h1 class="white typed">Voor een beter milieu</h1>
+							<h3 class="light white">Van Buurt in Beweging naar</h3>
+							<h1 class="white typed">Energie voor de buurt!</h1>
 						</div>
 					</div>
 				</div>
