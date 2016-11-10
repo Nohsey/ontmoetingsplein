@@ -18,7 +18,7 @@ if(isset($_POST['btlogin']))
 				$user = $userData->GetFirstName() ." ". $userData->GetLastName();
 		}
 		else {
-				echo "niet goe";
+				echo "niet goed";
 		}
 	}
 }
@@ -27,9 +27,9 @@ if(isset($_POST['btlogin']))
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Ontmoetingsplein - Evenementen</title>
-	<meta name="description" content="Het Ontmoetingsplein is een duurzame groene speeltuin die energie opwekt." />
-	<meta name="keywords" content="Ontmoetingsplein, Helmond, Brandevoort, Speelplaats, Speeltuin, Evenementen, Slimme Wijk" />
+	<title>Speelwerkplaats - Evenementen</title>
+	<meta name="description" content="Het Speelwerkplaats is een duurzame groene speeltuin die energie opwekt." />
+	<meta name="keywords" content="Speelwerkplaats, Helmond, Brandevoort, Speelplaats, Speeltuin, Evenementen, Slimme Wijk" />
 	<meta name="author" content="Michelle Broens, Rebecca Broens, Tom van Kaathoven, Kyle Ritchi & Mike Kotte" />
 	<!-- Favicons (created with http://realfavicongenerator.net/)-->
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
@@ -56,7 +56,6 @@ if(isset($_POST['btlogin']))
 	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="css/cardio.css">
 </head>
-
 <body>
 	<div class="preloader">
 		<img src="img/loader.gif" alt="Preloader image">
@@ -66,7 +65,7 @@ if(isset($_POST['btlogin']))
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
+					<span class="sr-only">Navigatie menu</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -76,17 +75,18 @@ if(isset($_POST['btlogin']))
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					<li><a href="index.php">Introductie</a></li>
-					<li><a href="#intro">Evenementen</a>
-						<?php
-							if(isset($_SESSION['GId'])){
-								$user = $userData->GetFirstName() ." ". $userData->GetLastName();
-								echo "<li><a href='#' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
-							}
-							else{
-								echo "<li><a href='#' data-toggle='modal' data-target='#modal1' class='btn btn-blue'>Inloggen</a></li>";
-							}
-						?>
+					<li><a href="speelwerkplaats.php">Speelwerkplaats</a></li>
+					<li><a href="evenementen.php">Evenementen</a></li>
+					<li><a href="aanvraagEvenement.php">Aanvragen</a></li>
+<?php
+	if(isset($_SESSION['GId'])){
+		$user = $userData->GetFirstName() ." ". $userData->GetLastName();
+		echo "<li><a href='profilepage.php' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
+	}
+	else{
+		echo "<li><a href='#' data-toggle='modal' data-target='#modal1' class='btn btn-blue'>Inloggen</a></li>";
+	}
+?>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->

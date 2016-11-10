@@ -27,9 +27,9 @@ if(isset($_POST['btlogin']))
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Ontmoetingsplein - Homepagina</title>
-	<meta name="description" content="Het Ontmoetingsplein is een duurzame groene speeltuin die energie opwekt." />
-	<meta name="keywords" content="Ontmoetingsplein, Helmond, Brandevoort, Speelplaats, Speeltuin, Evenementen, Slimme Wijk" />
+	<title>Speelwerkplaats - Homepagina</title>
+	<meta name="description" content="Het Speelwerkplaats is een duurzame groene speeltuin die energie opwekt." />
+	<meta name="keywords" content="Speelwerkplaats, Helmond, Brandevoort, Speelplaats, Speeltuin, Evenementen, Slimme Wijk" />
 	<meta name="author" content="Michelle Broens, Rebecca Broens, Tom van Kaathoven, Kyle Ritchi & Mike Kotte" />
 	<!-- Favicons (created with http://realfavicongenerator.net/)-->
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
@@ -66,22 +66,23 @@ if(isset($_POST['btlogin']))
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
+					<span class="sr-only">Navigatie menu</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="img/logo.png" data-active-url="img/logo-active.png" alt=""></a>
+				<a class="navbar-brand" href="index.php"><img src="img/logo.png" data-active-url="img/logo-active.png" alt=""></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					<li><a href="#intro">Introductie</a></li>
-					<li><a href="evenementen.php">Evenementen</a>
+					<li><a href="speelwerkplaats.php">Speelwerkplaats</a></li>
+					<li><a href="evenementen.php">Evenementen</a></li>
+					<li><a href="aanvraagEvenement.php">Aanvragen</a></li>
 <?php
 	if(isset($_SESSION['GId'])){
 		$user = $userData->GetFirstName() ." ". $userData->GetLastName();
-		echo "<li><a href='uitloggen.php' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
+		echo "<li><a href='profilepage.php' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
 	}
 	else{
 		echo "<li><a href='#' data-toggle='modal' data-target='#modal1' class='btn btn-blue'>Inloggen</a></li>";
@@ -99,6 +100,7 @@ if(isset($_POST['btlogin']))
 				<div class="header-text">
 					<div class="row">
 						<div class="col-md-12 text-center">
+							<h1 class="white typed">Speelwerkplaats</h1>
 							<h3 class="light white">Samen spelen,</h3>
 							<h1 class="white typed">Voor een beter milieu</h1>
 						</div>
@@ -255,7 +257,7 @@ if(isset($_POST['btlogin']))
 														echo'
 																<div class="schedule-row row">
 																	<div align="center" class="col-xs-12">
-																		<a href="evenementen.html"><h4 class="regular white">More</h4></a>
+																		<a href="evenementen.php"><h4 class="regular white">Meer</h4></a>
 																	</div>
 
 																</div>
@@ -322,8 +324,8 @@ if(isset($_POST['btlogin']))
 						</div>
 						<div class="item text-center">
 							<i class="icon fa fa-twitter"></i>
-							<h4 class="white light">Kom eens gezellig wat drinken of spelen bij het ontmoetingsplein</h4>
-							<h4 class="light-white light">#Gezellig #Speeltuin #Ontmoetingsplein</h4>
+							<h4 class="white light">Kom eens gezellig wat drinken of spelen bij het Speelwerkplaats</h4>
+							<h4 class="light-white light">#Gezellig #Speeltuin #Speelwerkplaats</h4>
 						</div>
 						<div class="item text-center">
 							<i class="icon fa fa-twitter"></i>
@@ -333,7 +335,7 @@ if(isset($_POST['btlogin']))
 						<div class="item text-center">
 							<i class="icon fa fa-twitter"></i>
 							<h4 class="white light">Je kunt op onze site ook evenementen aanvragen!</h4>
-							<h4 class="light-white light">#MovieNights #DansNight #Ontmoetingsplein</h4>
+							<h4 class="light-white light">#MovieNights #DansNight #Speelwerkplaats</h4>
 						</div>
 					</div>
 				</div>
@@ -404,5 +406,4 @@ if(isset($_POST['btlogin']))
 	<script src="js/jquery.onepagenav.js"></script>
 	<script src="js/main.js"></script>
 </body>
-
 </html>
