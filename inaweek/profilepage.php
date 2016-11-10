@@ -64,6 +64,9 @@ $loginData = new Login();
 <?php
 	if(isset($_SESSION['GId'])){
 		$user = $userData->GetFirstName() ." ". $userData->GetLastName();
+		if($user == "Rebecca Broens"){
+			echo "<li><a href='beheer.php'>Beheer</a></li>";
+		}
 		echo "<li><a href='profilepage.php' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
 	}
 	else{
@@ -96,7 +99,6 @@ $loginData = new Login();
             <div class="row intro-tables">
                 <div class="col-md-6">
                     <div class="intro-table intro-table-first" style="width: 200%; height: 100%; background-color: #FFBA30; padding: 20px 70px;">
-                        <form action="" method="POST">
                             <h3 class="white heading" style="text-align: center;">Uw profiel</h3>
                             <div class="circle"></div>
                             <table class="gegevens">
@@ -125,9 +127,8 @@ $loginData = new Login();
                                     <td><?php date_default_timezone_set("Europe/Amsterdam"); echo date("H:i");?></td>
                                 </tr>
                             </table>
-                        </form>
                         <br/>
-                        <button href="uitloggen.php" class="btn btnuitlog">Uitloggen</button>
+                        <a href="uitloggen.php" class="btn btnuitlog">Uitloggen</a>
                         <br/>
                         <h3 class="white heading" style="text-align: center;">Favoriete evenementen</h3>
                         <div class="row services" style="margin-top: 270px;">

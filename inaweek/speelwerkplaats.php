@@ -82,6 +82,9 @@ if(isset($_POST['btlogin']))
 <?php
 	if(isset($_SESSION['GId'])){
 		$user = $userData->GetFirstName() ." ". $userData->GetLastName();
+		if($user == "Rebecca Broens"){
+			echo "<li><a href='beheer.php'>Beheer</a></li>";
+		}
 		echo "<li><a href='profilepage.php' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
 	}
 	else{
@@ -116,7 +119,8 @@ if(isset($_POST['btlogin']))
 				<div class="col-md-12">
 						<div class="intro-table intro-table-first" style="width: 100%; height:100%; background: #15A7E1; padding: 20px 70px; margin-bottom: -200px;">
 						<h3 class="white heading" style="text-align: center;">Wie zijn wij?</h3>
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19885.292604308703!2d5.616304803628366!3d51.46436971101715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c726b3801db4ff%3A0xdf27f4829c2c3121!2sBrandevoort!5e0!3m2!1snl!2snl!4v1478771760600" width="100%" frameborder="0" style="border:0; min-height:400px; padding-bottom:40px;" allowfullscreen></iframe>
+						<p style="color:white;">Wij zijn de Speelwerkplaats, een leuke en vooral leerzame speeltuin voor jong en oud. Wij organiseren verschillende activiteiten voor iedereen. Ook ouders zijn van harte welkom om een drankje te nemen.</p>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19885.292604308703!2d5.616304803628366!3d51.46436971101715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c726b3801db4ff%3A0xdf27f4829c2c3121!2sBrandevoort!5e0!3m2!1snl!2snl!4v1478771760600" width="100%" frameborder="0" style="border:0; min-height:400px; padding: 40px 0px 40px 0px;" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>

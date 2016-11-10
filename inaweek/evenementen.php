@@ -76,11 +76,14 @@ if(isset($_POST['btlogin']))
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
 					<li><a href="speelwerkplaats.php">Speelwerkplaats</a></li>
-					<li><a href="evenementen.php">Evenementen</a></li>
+					<li><a href="#intro">Evenementen</a></li>
 					<li><a href="aanvraagEvenement.php">Aanvragen</a></li>
 <?php
 	if(isset($_SESSION['GId'])){
 		$user = $userData->GetFirstName() ." ". $userData->GetLastName();
+		if($user == "Rebecca Broens"){
+			echo "<li><a href='beheer.php'>Beheer</a></li>";
+		}
 		echo "<li><a href='profilepage.php' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
 	}
 	else{
@@ -95,20 +98,15 @@ if(isset($_POST['btlogin']))
 	</nav>
 	<header id="intro">
 		<div class="container">
-			<form class="search_evenementen">
-				<table>
-					<tr>
-						<td><input type="text" placeholder="Trefwoord/Datum"></td>
-						<td>
-							<select id="search_on">
-                <option value="on_date">Datum</option>
-                <option value="on_word">Trefwoord</option>
-              </select>
-						</td>
-						<td><button value="search">Zoeken</button></td>
-					</tr>
-				</table>
-			</form>
+			<div class="table">
+				<div class="header-text">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h3 class="white typed">Bekijk hier de georganiseerde evenementen!</h3>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
 	<section>

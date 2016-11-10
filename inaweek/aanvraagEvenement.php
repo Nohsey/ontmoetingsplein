@@ -77,10 +77,13 @@ if(isset($_POST['btlogin']))
 				<ul class="nav navbar-nav navbar-right main-nav">
 					<li><a href="speelwerkplaats.php">Speelwerkplaats</a></li>
 					<li><a href="evenementen.php">Evenementen</a></li>
-					<li><a href="aanvraagEvenement.php">Aanvragen</a></li>
+					<li><a href="#intro">Aanvragen</a></li>
 <?php
 	if(isset($_SESSION['GId'])){
 		$user = $userData->GetFirstName() ." ". $userData->GetLastName();
+		if($user == "Rebecca Broens"){
+			echo "<li><a href='beheer.php'>Beheer</a></li>";
+		}
 		echo "<li><a href='profilepage.php' class='btn btn-blue'>$user &nbsp;<i class='fa fa-user' style='font-size:20px; vertical-align: middle;'></i></a></li>";
 	}
 	else{

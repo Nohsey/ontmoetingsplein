@@ -78,6 +78,7 @@ if(isset($_POST['btlogin']))
 					<li><a href="speelwerkplaats.php">Speelwerkplaats</a></li>
 					<li><a href="evenementen.php">Evenementen</a></li>
 					<li><a href="aanvraagEvenement.php">Aanvragen</a></li>
+					<li><a href='#intro'>Beheer</a></li>
 <?php
 	if(isset($_SESSION['GId'])){
 		$user = $userData->GetFirstName() ." ". $userData->GetLastName();
