@@ -127,6 +127,8 @@ $loginData = new Login();
                             </table>
                         </form>
                         <br/>
+                        <button href="uitloggen.php" class="uitlogbutton">Uitloggen</button>
+                        <br/>
                         <h3 class="white heading" style="text-align: center;">Favoriete evenementen</h3>
                         <div class="row services" style="margin-top: 270px;">
 

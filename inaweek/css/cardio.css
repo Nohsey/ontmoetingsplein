@@ -1205,3 +1205,16 @@ footer .social-footer li:hover a {
 	background-size: 180px 180px;
 	border: 2px solid white;
     }
+
+		.uitlogbutton button{
+			width: 170px;
+			height: 100%;
+			float: left;
+			padding: 5px;
+			color: white;
+			background: red;
+		}
+
+		.uitlogbutton button:hover {
+			background: orange;
+		}
